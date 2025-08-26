@@ -7,46 +7,61 @@
     <title>Document</title>
 </head>
 <body>
-    
-<h1  id="nav">Taschenrechner</h1>
+<!-- Überschrift des Taschenrechners -->
+<h1 id="nav">Taschenrechner</h1>
+
+<!-- Hauptcontainer, eventuell für Styling (zentrieren etc.) -->
 <div class="main">
-<div id="calculator">
 
-    <input id="display"  placeholder="0" readonly>
-    <div id="keys">
+    <!-- Container für den eigentlichen Taschenrechner -->
+    <div id="calculator">
 
-        <button onclick="appendToDisplay('%')" class="op-btn">%</button>
-        <button onclick="clearDisplay()" class="op-btn">CE</button>
-        <button onclick="clearOne()" class="op-btn">C</button>         
-        <button onclick="appendToDisplay('/')" class="op-btn">/</button>       
-        <button onclick="appendToDisplay('7')">7</button>
-        <button onclick="appendToDisplay('8')">8</button>
-        <button onclick="appendToDisplay('9')">9</button>
-        <button onclick="appendToDisplay('*')" class="op-btn">*</button>
-        <button onclick="appendToDisplay('4')">4</button>
-        <button onclick="appendToDisplay('5')">5</button>
-        <button onclick="appendToDisplay('6')">6</button>
-        <button onclick="appendToDisplay('-')" class="op-btn">-</button>
-        <button onclick="appendToDisplay('1')">1</button>
-        <button onclick="appendToDisplay('2')">2</button>
-        <button onclick="appendToDisplay('3')">3</button>
-        <button onclick="appendToDisplay('+')" class="op-btn">+</button>
-        <button onclick="appendToDisplay(',')">,</button>
-        <button onclick="appendToDisplay('0')">0</button>
-        <button onclick="appendToDisplay('.')">.</button>
-        <button onclick="calculate()" class="op-btn">=</button>
-        
+        <!-- Eingabefeld zur Anzeige der eingegebenen Zahlen und Ergebnisse -->
+        <!-- "readonly" bedeutet, dass der Benutzer hier nichts direkt eintippen kann -->
+        <input id="display" placeholder="0" readonly>
 
-        </div>
+        <!-- Container für alle Tasten des Taschenrechners -->
+        <div id="keys">
 
-</div>
-</div>
-    
+            <!-- Erste Reihe: Prozent, CE (alles löschen), C (eine Stelle löschen), Division -->
+            <button onclick="appendPercent()" class="op-btn">%</button>
+            <button onclick="clearDisplay()" class="op-btn">CE</button>
+            <button onclick="clearOne()" class="op-btn">C</button>         
+            <button onclick="appendToDisplay('/')" class="op-btn">/</button>       
 
+            <!-- Zweite Reihe: Zahlen 7, 8, 9 und Multiplikation -->
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('*')" class="op-btn">*</button>
 
+            <!-- Dritte Reihe: Zahlen 4, 5, 6 und Subtraktion -->
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')" class="op-btn">-</button>
 
-        
-        
+            <!-- Vierte Reihe: Zahlen 1, 2, 3 und Addition -->
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('+')" class="op-btn">+</button>
+            <!-- Letzte Reihe: Komma, 0, Punkt und Gleichheitszeichen -->
+            <button></button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+
+            <!-- Gleichheitszeichen zur Berechnung des Ausdrucks -->
+            <button onclick="calculate()" class="op-btn">=</button>
+
+        </div> <!-- Ende des key-Containers -->
+
+    </div> <!-- Ende des calculators -->
+
+</div> <!-- Ende des main-Containers -->
+
+<!-- Einbindung der externen JavaScript-Datei für die Funktionalität -->
 <script src="rechner.js"></script>
+
 </body>
 </html>

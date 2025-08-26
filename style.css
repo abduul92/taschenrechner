@@ -1,69 +1,79 @@
-#nav{
-    font-size: 70px;
-    margin: 0;
-    text-align: center;
-    background-color: rgb(215, 221, 219);
-    color: rgb(90, 92, 92);
+/* Styling für die Hauptüberschrift (Taschenrechner) */
+#nav {
+    font-size: 70px; /* Sehr große Schrift für die Überschrift */
+    margin: 0; /* Kein äußerer Abstand (top/bottom) */
+    text-align: center; /* Zentriert den Text */
+    background-color: rgb(215, 221, 219); /* Hellgrauer Hintergrund */
+    color: rgb(90, 92, 92); /* Dunkelgraue Schriftfarbe */
+}
 
 
+/* Styling für das äußere Container-Element */
+.main {
+    margin: 0; /* Kein äußerer Abstand */
+    display: flex; /* Flexbox-Layout, um Inhalte zu zentrieren */
+    justify-content: center; /* Zentriert horizontal */
+    align-items: center; /* Zentriert vertikal */
+    height: 100vh; /* Volle Höhe des Bildschirms */
+    background-color: whitesmoke; /* Sehr helles Grau als Hintergrund */
 }
-.main{
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: whitesmoke;
-}
-#calculator{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: gainsboro;
-    border-radius: 15px;
-    overflow: hidden;
-    max-width: 500px;
-    
 
+
+/* Styling für das Taschenrechner-Gehäuse */
+#calculator {
+    font-family: Arial, Helvetica, sans-serif; /* Schriftart */
+    background-color: gainsboro; /* Helles Grau für das Gehäuse */
+    border-radius: 15px; /* Abgerundete Ecken */
+    overflow: hidden; /* Verhindert, dass Inhalte herausragen */
+    max-width: 500px; /* Maximale Breite für den Taschenrechner */
 }
+
+/* Styling für den Tastenbereich */
 #keys {
-
-    display: grid;
-    grid-template-columns: repeat(4, 0fr);
-    gap: 10px;
-    padding: 25px;
+    display: grid; /* Raster-Layout (Grid-System) */
+    grid-template-columns: repeat(4, 1fr); 
+    
+    gap: 10px; /* Abstand zwischen den Buttons */
+    padding: 25px; /* Innenabstand innerhalb des Tastenbereichs */
 }
+
+/* Styling für das Display (Eingabefeld oben im Rechner) */
 #display {
-    width: 100%;
-    padding: 20px;
-    font-size: 5rem;
-    text-align: left;
-    border: none;
-    background-color: rgb(161, 160, 160);
-    color: black;
-
-    
-    
-
+    width: 100%; /* Volle Breite innerhalb des Containers */
+    padding: 20px; /* Innenabstand rundherum */
+    font-size: 5rem; /* Sehr große Schrift */
+    text-align: left; /* Text linksbündig */
+    border: none; /* Kein Rahmen */
+    background-color: rgb(161, 160, 160); /* Grauer Hintergrund */
+    color: black; /* Schwarze Schrift */
 }
+
+/* Grundlegendes Button-Design */
 button {
-    width: 100px;
-    height: 100px;
-    border-radius: 40px;
-    border: 1px solid grey;
-    text-align: center;
-    background-color: azure;
-    font-size: 3rem;
-    color: rgb(78, 78, 78);
-    font-weight: bold;
-    cursor: pointer;
+    width: 100px; /* Breite jeder Taste */
+    height: 100px; /* Höhe jeder Taste */
+    border-radius: 40px; /* Abgerundete Ecken (fast Kreis) */
+    border: 1px solid grey; /* Grauer Rahmen */
+    text-align: center; /* Zentrierter Text */
+    background-color: azure; /* Sehr helles Blau als Standardfarbe */
+    font-size: 3rem; /* Große Schrift */
+    color: rgb(78, 78, 78); /* Dunkelgraue Schriftfarbe */
+    font-weight: bold; /* Fetter Text */
+    cursor: pointer; /* Zeiger zeigt an, dass Button klickbar ist */
 }
-button:hover{
-    background-color: rgb(176, 182, 187);
-}
-button:active{
-    background-color: rgb(148, 154, 158);
 
+/* Hover-Effekt: Farbe beim Überfahren mit der Maus */
+button:hover {
+    background-color: rgb(176, 182, 187); /* Etwas dunklerer Hintergrund beim Hover */
 }
-.op-btn{
-    background-color: gray;
-    color: rgb(51, 51, 51);
+
+/* Aktiv-Effekt: Farbe beim gedrückt Halten */
+button:active {
+    background-color: rgb(148, 154, 158); /* Noch dunkler beim aktiven Klick */
+}
+
+/* Zusätzlicher Stil für Operatoren-Buttons */
+.op-btn {
+    background-color: gray; /* Graue Hintergrundfarbe */
+    color: rgb(51, 51, 51); /* Dunkelgraue Schrift */
 }
